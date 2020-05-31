@@ -53,3 +53,10 @@ For help on-the-go, simple use
 -  -n NAME, --name NAME  Files Output name (default is dynamic) (default:
                         YYmmddHHMMSS.csv)
 -  -s SEP, --sep SEP     String separator coming from serial (default: ;)
+
+# Handling Errors
+When trying to log a specified serial port, an exception may be thrown if no port is available within the specified name. Example:
+
+> SerialException("could not open port {!r}: {!r}".format(self.portstr, ctypes.WinError())) serial.serialutil.SerialException: could not open port 'COM1': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+
+Just certify the port availability and spelling. Once done, try again.
