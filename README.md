@@ -1,4 +1,4 @@
-# seriuslogger
+# seriouslogger
 A simple code to log data from Serial Port
 
 This script logs data coming from a Serial Port (like COM1 or /dev/ttyUSB0) in a CSV file. 
